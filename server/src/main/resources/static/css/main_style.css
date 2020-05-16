@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Monda&display=swap');
+
+body {
+    padding: 0;
+    background: #b6d1e7; /* Browser which does not support gradients */
+    background-image: linear-gradient(to right, #b6d1e7,  #dfe4e8);
+}
+
+button {
+    font-family: 'Monda';
+}
+
+.keeper-container {
+    width:100%;
+}
+
+.welcome-container {
+    background-image: linear-gradient(to right, #b6d1e7,  #dfe4e8);
+    width:60%;
+    height: 470px;
+    text-align:center;
+    margin:10% auto;
+    font-family: 'Monda';
+    -webkit-box-shadow: -8px 6px 40px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -8px 6px 40px 0px rgba(0,0,0,0.75);
+    box-shadow: -8px 6px 40px 0px rgba(0,0,0,0.75);
+}
+
+.welcome-container h1 {
+    padding-top:3%;
+    color: #3f3573;
+    font-size: 200%;
+}
+
+.welcome-container .button-placeholder {
+    margin-top:10%;
+}
+
+.left-holder {
+    border-right:1px solid black;
+    float:left;
+    width:50%;
+    height: 100%;
+}
+
+.left-holder img {
+    border:1px solid black;
+    margin-top: 4%;
+}
+
+.right-holder {
+    float:right;
+    width:50%;
+    height:100%;
+}
+
+.process-image {
+    margin-top: 25%;
+    color:black;
+}
+
+input[type=file] {
+    margin-top: 15%;
+}
+
+table {
+    width: 100%;
+}
+
+.output-data-screen {
+    display:none;
+    margin-top: 20%;
+}
+
+
+
+
+

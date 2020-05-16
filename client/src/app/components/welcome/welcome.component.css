@@ -1,0 +1,82 @@
+.main-block {
+    background-color: #0061f2;
+    width: 100%;
+    height: 800px;
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+    background-image: linear-gradient(135deg, #0061f2 0%, rgba(105, 0, 199, 0.8) 100%);
+}
+
+footer {
+    display: block;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+.footer-image {
+    margin-top: 2%;
+    display: inline-block;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.up-header {
+    width: 100%;
+    height: 200px;
+    color: white;
+    text-align: center;
+}
+
+.block {
+    display: block;
+    width: 50%;
+    height: 200px;
+    margin: auto;
+    text-align: left;
+}
+
+.side-title {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 5%;
+    font-family: "Metropolis", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.side-eye {
+    padding-top: 2%;
+}
+
+
+@media only screen and (max-width: 1280px) {
+    .block {
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 1280px) {}
+
+
+
+@media only screen and (max-width: 512px) {
+    .main-block {
+        height: 1000px;
+    }
+    .block {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 408px) {
+    .side-title {
+        float: right;
+        text-align: right;
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .main-block {
+        height: 1000px;
+    }
+}
