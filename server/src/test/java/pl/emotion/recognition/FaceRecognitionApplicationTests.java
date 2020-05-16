@@ -7,12 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.mock.web.MockMultipartFile;
-import org.springframework.util.Assert;
 import org.springframework.web.multipart.MultipartFile;
-import pl.emotion.recognition.helper.ConverterHelper;
 import pl.emotion.recognition.json_models.FaceReckonResult;
 import pl.emotion.recognition.service.FaceRecognitionService;
-
 
 import java.io.IOException;
 import java.nio.file.Files;

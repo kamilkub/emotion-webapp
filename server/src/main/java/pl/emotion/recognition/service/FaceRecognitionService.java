@@ -3,8 +3,11 @@ package pl.emotion.recognition.service;
 import com.algorithmia.AlgorithmException;
 import com.algorithmia.Algorithmia;
 import com.algorithmia.AlgorithmiaClient;
-import com.algorithmia.algo.*;
-import com.google.gson.*;
+import com.algorithmia.algo.AlgoResponse;
+import com.algorithmia.algo.Algorithm;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -15,7 +18,8 @@ import pl.emotion.recognition.helper.ConverterHelper;
 import pl.emotion.recognition.json_models.FaceReckonResult;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class FaceRecognitionService {
