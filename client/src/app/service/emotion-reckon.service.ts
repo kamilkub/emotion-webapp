@@ -15,4 +15,8 @@ export class EmotionReckonService {
   getEmotions(): Observable<FaceReckonResult[]> {
       return this.httpClient.get<FaceReckonResult[]>(this.emotionApiUrl);
   }
+
+  testHello() {
+    console.log("Service works");
+  }
 }

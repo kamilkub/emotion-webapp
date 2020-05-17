@@ -1,9 +1,14 @@
 <section class="middle-block">
   <div class="welcome-window">
     <div class="left-side">
-      <img src="assets/images/person256.png" alt="person">
+      <img draggable="false" src="assets/images/person256.png" alt="person">
     </div>
     <div class="right-side">
+      <div class="icons-field" uploadHandler>
+        <input type="file" id="fileUpload" accept="image/*">
+        <img src="assets/images/drag.png" class="drag-ico" draggable="false" alt="drag-icon">
+        <p class="info-text" ondragstart="return false">Click or drag &amp; drop</p>
+      </div>
 
     </div>
   </div>

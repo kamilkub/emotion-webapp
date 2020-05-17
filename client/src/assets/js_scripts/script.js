@@ -11,5 +11,7 @@ function resize(){
         }
     }
 }
+
 resize();
 $(window).on('resize', resize);
+

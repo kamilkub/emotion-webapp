@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { EmotionReckonServiceService } from './emotion-reckon-service.service';
+import { EmotionReckonService } from './emotion-reckon.service';
 
 describe('EmotionReckonServiceService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));

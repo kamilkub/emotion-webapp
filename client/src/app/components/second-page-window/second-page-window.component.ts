@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EmotionReckonService } from '../../service/emotion-reckon.service';
+import { UploadHandler } from '../../directives/upload-handler.directive';
 
 @Component({
   selector: 'app-second-page-window',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SecondPageWindowComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private emotionService: EmotionReckonService) {
+
+  }
 
   ngOnInit() {
   }
+
 
 }
