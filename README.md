@@ -11,10 +11,9 @@ Results might be not accurate at all, mainly due to still developing algorithm.
 - JUnit 5.5.2
 
 ## Getting started
-- First clone github repository <br>
-<code>
-   git clone https://github.com/kamilkub/emotion-recognition.git
-</code>
+- First clone github repository
+
+<code>git clone https://github.com/kamilkub/emotion-recognition.git</code>
 
  - To run the server, cd into the server folder and run: <br>
 
