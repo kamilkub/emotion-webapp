@@ -1,13 +1,25 @@
 <section class="middle-block">
   <div class="welcome-window">
     <div class="left-side">
-      <img draggable="false" src="assets/images/person256.png" alt="person">
+      <img draggable="false" *ngIf="selectedPhNumber === 0"  src="assets/images/person256.png" alt="person">
+
+        <img class="preview-image" *ngIf="selectedPhNumber > 0" draggable="false" src="assets/images/person256.png"  [src]="uploadPhotoPreview" alt="person">
+
     </div>
     <div class="right-side">
-      <div class="icons-field" uploadHandler>
-        <input type="file" id="fileUpload" accept="image/*">
-        <img src="assets/images/drag.png" class="drag-ico" draggable="false" alt="drag-icon">
-        <p class="info-text" ondragstart="return false">Click or drag &amp; drop</p>
+      <div class="icons-field" ngf-drop-disabled="isDownloadFinished" uploadHandler (emotionImage)="uploadFaceImage($event)">
+        <div *ngIf="!isDownloadFinished" class="lds-facebook drag-ico" [ngClass]="loadStyles"><div></div><div></div><div></div></div>
+
+        <input *ngIf="isDownloadFinished" type="file" id="fileUpload" accept="image/*">
+        <img *ngIf="isDownloadFinished" src="assets/images/drag.png" class="drag-ico" draggable="false" alt="drag-icon">
+
+        <p class="info-text" *ngIf="isDownloadFinished" ondragstart="return false">Click or Drag &amp; Drop here</p>
+        <p class="info-text" *ngIf="!isDownloadFinished" ondragstart="return false">Processing your photo..</p>
+      </div>
+
+      <div *ngFor="let a of result">
+            <p>{{ a.emotionName + " " + a.confidence }}</p>
+
       </div>
 
     </div>

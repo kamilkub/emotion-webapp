@@ -1,10 +1,19 @@
-import { Directive, HostBinding, HostListener, EventEmitter } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import { Directive, HostBinding, HostListener, EventEmitter, Output } from '@angular/core';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+
+export interface EmotionPhoto {
+    file: File,
+    previewUrl: SafeUrl
+
+}
+
 
 @Directive({
   selector: '[uploadHandler]'
 })
 export class UploadHandler {
+
+  @Output() emotionImage: EventEmitter<EmotionPhoto> = new EventEmitter();
 
   @HostBinding("style.background") private background = "";
   @HostBinding("style.background-image") private backgroundImage: any;
@@ -30,6 +39,11 @@ export class UploadHandler {
     event.preventDefault();
     event.stopPropagation();
     this.background = "";
+
+    let file: File = event.dataTransfer.files[0];
+    let previewUrl = this.domSanitizer.bypassSecurityTrustUrl(window.URL.createObjectURL(file));
+
+    this.emotionImage.emit({file, previewUrl});
 
   }
 

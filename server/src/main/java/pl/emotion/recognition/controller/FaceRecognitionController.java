@@ -26,9 +26,10 @@ public class FaceRecognitionController {
     }
 
 
-    @PostMapping("/recognize-emotion")
+    @PostMapping(value = "/recognize-emotion", consumes = {"multipart/form-data"})
     public ResponseEntity recognizeEmotionsEndPoint(@RequestParam("recImage") MultipartFile file) throws IOException, AlgorithmException {
-        if(file == null || file.isEmpty()) {
+        System.out.println(file.getName());
+        if(file.isEmpty()) {
             return new ResponseEntity<>("I think you should choose an image", HttpStatus.BAD_REQUEST);
         }
         if(Objects.requireNonNull(file.getContentType()).startsWith("image/"))

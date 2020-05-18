@@ -6,6 +6,7 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import { FirstPageWindowComponent } from './components/first-page-window/first-page-window.component';
 import { SecondPageWindowComponent } from './components/second-page-window/second-page-window.component';
 import { UploadHandler } from './directives/upload-handler.directive';
+import { EmotionReckonService } from './service/emotion-reckon.service';
 
 
 
@@ -22,7 +23,7 @@ import { UploadHandler } from './directives/upload-handler.directive';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ EmotionReckonService ],
   bootstrap: [WelcomeComponent]
 })
 export class AppModule { }
