@@ -13,7 +13,7 @@ Results might be not accurate at all, mainly due to still developing algorithm.
 ## Getting started
 - First clone github repository
 
-<code>git clone https://github.com/kamilkub/emotion-recognition.git</code>
+   <code>git clone https://github.com/kamilkub/emotion-recognition.git</code>
 
  - To run the server, cd into the server folder and run: <br>
 
